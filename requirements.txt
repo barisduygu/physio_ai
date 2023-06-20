@@ -15,3 +15,4 @@ streamlit-authenticator
 PyMuPDF
 streamlit_extras
 streamlit_authenticator
+protobuf~=3.19.0
