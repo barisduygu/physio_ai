@@ -20,7 +20,7 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from pathlib import Path
 import streamlit_authenticator as stauth
 
-image = Image.open("assets/logo/logo_physio.png")
+image = Image.open("./assets/logo/logo_physio.png")
 VECTORSTORE_DIR = "vectorstore"
 
 
