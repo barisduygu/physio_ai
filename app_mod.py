@@ -24,6 +24,11 @@ def main():
         st.session_state.chat_history = []
     if "vectorstore_selection" not in st.session_state:
         st.session_state.vectorstore_selection = "Leitlinie auswählen"
+    
+    user_question = st.text_input("Stellen Sie hier Ihre Fragen:", key="user_input")
+
+    if user_question:
+        cost = handle_userinput(user_question)
 
     with st.sidebar:
         st.image(image)
@@ -38,11 +43,6 @@ def main():
         st.session_state.vectorstore_selection = st.selectbox(
             ":file_folder: Wählen Sie die Leitlinie aus", options=vectorstore_files
         )
-
-    user_question = st.text_input("Stellen Sie hier Ihre Fragen:", key="user_input")
-
-    if user_question:
-        cost = handle_userinput(user_question)
 
     st.markdown("---")
 
