@@ -109,30 +109,6 @@ def save_vectorstore(vectorstore, filename):
     with open(os.path.join(VECTORSTORE_DIR, filename), "wb") as file:
         pickle.dump(vectorstore, file)
 
-
-# Define a list of questions about Windows 11's minimum hardware configuration.
-questions = [
-    "What is the minimum processor requirement for Windows 11?",
-    "What is the minimum amount of RAM required for Windows 11?",
-    "What is the minimum amount of storage space required for Windows 11?",
-    "What is the minimum graphics card requirement for Windows 11?",
-    "What is the minimum display resolution requirement for Windows 11?",
-    "What is the minimum TPM version required for Windows 11?",
-    "What is the minimum Secure Boot requirement for Windows 11?",
-    "What is the minimum DirectX version required for Windows 11?",
-    "What is the minimum WDDM driver version required for Windows 11?",
-    "What is the minimum display size requirement for Windows 11?",
-    "What is the minimum number of color bits per channel required for Windows 11?",
-    "Does Windows 11 require internet connectivity?",
-    "Does Windows 11 require a Microsoft account?",
-]
-
-
-# Generate a random question from the list.
-def get_random_question():
-    return random.choice(questions)
-
-
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
