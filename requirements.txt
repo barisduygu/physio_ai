@@ -7,12 +7,6 @@ faiss-cpu==1.7.4
 altair<5
 tiktoken==0.4.0
 numpy==1.24.3
-streamlit-lottie
-pdfplumber
-requests
-Image
-streamlit-authenticator
-PyMuPDF
-streamlit_extras
-streamlit_authenticator
-protobuf~=3.19.0
+image==1.5.33
+streamlit-extras==0.2.7
+requests==2.31.0
