@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from PIL import Image
 from pathlib import Path
 import streamlit_authenticator as stauth
-
+from streamlit_extras.add_vertical_space import add_vertical_space
 from utils import load_vectorstore, get_text_chunks, save_vectorstore, handle_userinput, get_conversation_chain
 from htmlTemplates import css, bot_template, user_template
 
