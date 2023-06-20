@@ -29,6 +29,9 @@ def save_vectorstore(vectorstore, filename):
 
 def handle_userinput(user_question):
     cost = None
+    if 'vectorstore_selection' not in st.session_state:
+        st.session_state.vectorstore_selection = "Leitlinie auswählen"
+        
     if st.session_state.vectorstore_selection != "Leitlinie auswählen":
         vectorstore = load_vectorstore(st.session_state.vectorstore_selection)
         llm = ChatOpenAI()
@@ -61,6 +64,7 @@ def handle_userinput(user_question):
         unsafe_allow_html=True,
     )
     return cost
+
 
 def get_conversation_chain(vectorstore, llm):
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
